@@ -1,4 +1,4 @@
-# Atlantiic_Data
+# Atlantic_Data
 
 The current directory structure has the following sub directories:
 ~/python
