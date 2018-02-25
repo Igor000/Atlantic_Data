@@ -1,9 +1,10 @@
 # Atlantic_Data
 
 The current directory structure has the following sub directories:
-~/python
-~input_data
-~sql
+python
+html
+input_data
+sql
 
 
 The main python file is parse_input_file.py
@@ -19,3 +20,5 @@ atlantic_purchase
 
 The Postgres database schema is in ~sql directory inside this file:
 customer_purchase_sql.txt
+
+The HTML directory has a mock index.html with file upload, parsing, and DB analysis.
