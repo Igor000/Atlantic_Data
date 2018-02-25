@@ -1,0 +1,45 @@
+-- Table: public.atlantic_customer
+
+-- DROP TABLE public.atlantic_customer;
+
+CREATE TABLE public.atlantic_customer
+(
+  cust_id integer,
+  first_name character(30),
+  last_name character(30),
+  adrress character(50),
+  state character(2),
+  zip character(5),
+  date_time timestamp with time zone,
+  load_time timestamp with time zone
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.atlantic_customer
+  OWNER TO postgres;
+
+=============
+-- Table: public.atlantic_purchase
+
+-- DROP TABLE public.atlantic_purchase;
+
+CREATE TABLE public.atlantic_purchase
+(
+  cust_id integer,
+  purchase_status character(10),
+  product_id integer,
+  product_name character(100),
+  purchase_amt money,
+  date_time time with time zone,
+  load_time timestamp with time zone
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.atlantic_purchase
+  OWNER TO postgres;
+===
+
+COPY atlantic_customer FROM 'customer.csv' with csv;
+COPY atlantic_purchase FROM 'purchase.csv' with csv;
